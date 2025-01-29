@@ -1,0 +1,4 @@
+__pycache__/
+libenv/
+.env
+update.txt
