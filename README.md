@@ -42,8 +42,8 @@ Before setting up the project locally, ensure the following prerequisites instal
         pip install -r requirements.txt
 
 6. Create a .env file and set necessary secret keys below:
-API_TOKEN =
-DATABASE =
+- API_TOKEN
+- DATABASE
 
 7. Run the Flask app
 
@@ -78,7 +78,12 @@ The API should now be running locally at [http://127.0.0.1:5000/api/v1/books](ht
                     "publication_date": "2000-12-29",
                     "title": "Rich Dad Poor Dad"
                 }
-            ]
+            ], 
+            "pagination": {
+                "current_page": 1,
+                "per_page": 10,
+                "total_pages": 1
+                }
         }
 
 
@@ -97,3 +102,43 @@ The API should now be running locally at [http://127.0.0.1:5000/api/v1/books](ht
                     "title": "Emotional Intelligence"
                 }
 
+
+3. Add a book
+
+        POST /api/v1/books
+
+- Response Example: 
+   
+        {
+            "book_id": 5,
+            "message": "Book added successfully"
+        }
+
+
+4. Update a book
+
+        PUT /api/v1/books/{id}
+
+- Response Example:
+
+        {
+            "message": "Book updated successfully"
+        }
+
+
+5. Delete a book
+
+        DELETE /api/v1/books/{id}
+
+- Response Example: 
+
+        {
+            "message": "Book successfully deleted"
+        }
+
+
+## CONTACT
+For questions, reach out to:
+
+- Email: addisinicholas@gmail.com
+- GitHub: @hisrich
