@@ -104,18 +104,6 @@ def delete_book(id):
     db.session.commit()
 
     return jsonify({"message": "Book successfully deleted"}), 200
-    
-
-# @app.after_request
-# def rate_limit_headers(response):
-#     limit = response.headers.get("X-RateLimit-Limit")
-#     remaining = response.headers.get("X-RateLimit-Remaining")
-#     reset = response.headers.get("X-RateLimit-Reset")
-#     if limit and remaining and reset:
-#         response.headers["X-RateLimit-Limit"] = limit
-#         response.headers["X-RateLimit-Remaining"] = remaining
-#         response.headers["X-RateLimit-Reset"] = reset
-#     return response
 
 
 
